@@ -11,7 +11,6 @@ public class LinkedList<T> {
         } else {
             newMyNode.setNext(head);
             head = newMyNode;
-
         }
     }
     public void append(T data){
@@ -22,7 +21,6 @@ public class LinkedList<T> {
         } else {
             tail.setNext(newMyNode);
             tail = newMyNode;
-
         }
     }
     public void show() {
@@ -36,7 +34,19 @@ public class LinkedList<T> {
             }
             System.out.println();
         }
+    }
+    public boolean isEmpty() {
+        return head == null ? true : false;
+    }
 
+    public T pop() {
+        if (head == null)
+            return null;
+        else {
+            T data = head.getKey();
+            head = (MyNode<T>) head.getNext();
+            return data;
+        }
     }
 
 }
