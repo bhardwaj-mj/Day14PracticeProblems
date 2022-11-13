@@ -1,39 +1,42 @@
 package com.bridgelabz;
 
 public class LinkedList<T> {
-    Node<T> head;
-    Node<T> tail;
+    MyNode<T> head;
+    MyNode<T> tail;
     public void push(T data){
-        Node<T> node=new Node<>(data);
-        if(head==null) {
-            head = node;
-            tail = node;
-        }
-        else{
-            node.setNext(head);
-            head=node;
+        MyNode<T> newMyNode = new MyNode(data);
+        if (head == null) {
+            head = newMyNode;
+            tail = newMyNode;
+        } else {
+            newMyNode.setNext(head);
+            head = newMyNode;
+
         }
     }
     public void append(T data){
-        Node<T> node=new Node<>(data);
-        if(head==null) {
-            head = node;
-            tail = node;
-        }
-        else{
-            tail.setNext(node);
-            tail=node;
+        MyNode<T> newMyNode = new MyNode(data);
+        if (head == null) {
+            head = newMyNode;
+            tail = newMyNode;
+        } else {
+            tail.setNext(newMyNode);
+            tail = newMyNode;
+
         }
     }
-    public void display(){
-        if(head==null){
-            System.out.println("Linked list is empty");
+    public void show() {
+        if (head == null) {
+            System.out.println("Linked list is Empty");
+        } else {
+            MyNode<T> temp = head;
+            while (temp != null) {
+                System.out.print(temp.getKey() + " ");
+                temp = (MyNode<T>) temp.getNext();
+            }
+            System.out.println();
         }
-        Node<T> temp=head;
-        while (temp!=null){
-            System.out.print(temp.getData()+" -> ");
-            temp=temp.getNext();
-        }
-        System.out.println();
+
     }
+
 }
