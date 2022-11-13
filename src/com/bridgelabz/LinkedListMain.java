@@ -12,5 +12,9 @@ public class LinkedListMain {
         linkedList2.append(30);
         linkedList2.append(70);
         linkedList2.show();
+        linkedList1.pop();
+        linkedList1.show();
+        linkedList2.pop();
+        linkedList2.show();
     }
 }
