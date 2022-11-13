@@ -16,5 +16,9 @@ public class LinkedListMain {
         linkedList1.show();
         linkedList2.pop();
         linkedList2.show();
+        linkedList1.popLast();
+        linkedList1.show();
+        linkedList2.popLast();
+        linkedList2.show();
     }
 }
