@@ -83,6 +83,21 @@ public class LinkedList<T> {
         }
 
     }
+    public boolean deleteValue(T searchData) {
+        MyNode<T> deletingNode = search(searchData);
+        MyNode<T> temp = head;
+        if(search(searchData) != null) {
+            while (temp != null) {
+                if (temp.getNext().equals(deletingNode)) {
+                    temp.setNext(deletingNode.getNext());
+                    deletingNode.setNext(null);
+                    return true;
+                }
+                temp = (MyNode<T>)temp.getNext();
+            }
+        }
+        return false;
+    }
     @Override
     public String toString() {
         return "LinkedList{" +

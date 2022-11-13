@@ -23,5 +23,7 @@ public class LinkedListMain {
         System.out.println( linkedList1.search(30));
         linkedList1.searchAndInsert(30,40);
         linkedList1.show();
+        linkedList1.deleteValue(40);
+        linkedList1.show();
     }
 }
