@@ -10,6 +10,9 @@ public class Queue<E> {
     public void enqueue(E data){
         linkedList1.append(data);
     }
+    public void dequeue(){
+        linkedList1.pop();
+    }
     public void printQueue(){
         linkedList1.show();
     }
@@ -21,6 +24,8 @@ public class Queue<E> {
         queue1.enqueue(70);
         queue1.printQueue();
         System.out.println();
+        queue1.dequeue();
+        queue1.printQueue();
 
     }
 }
