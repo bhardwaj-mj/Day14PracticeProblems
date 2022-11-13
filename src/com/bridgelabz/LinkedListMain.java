@@ -21,5 +21,7 @@ public class LinkedListMain {
         linkedList2.popLast();
         linkedList2.show();
         System.out.println( linkedList1.search(30));
+        linkedList1.searchAndInsert(30,40);
+        linkedList1.show();
     }
 }

@@ -71,4 +71,22 @@ public class LinkedList<T> {
         }
         return null;
     }
+    public boolean searchAndInsert(T searchData, T insertData) {
+        MyNode<T> newMyNode = new MyNode(insertData);
+        MyNode<T> searchedMyNode = search(searchData);
+        if (searchedMyNode == null)
+            return false;
+        else {
+            newMyNode.setNext(searchedMyNode.getNext());
+            searchedMyNode.setNext(newMyNode);
+            return true;
+        }
+
+    }
+    @Override
+    public String toString() {
+        return "LinkedList{" +
+                "head=" + head +
+                '}';
+    }
 }
