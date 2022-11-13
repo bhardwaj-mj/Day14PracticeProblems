@@ -62,4 +62,13 @@ public class LinkedList<T> {
             return data;
         }
     }
+    public MyNode<T> search(T searchData) {
+        MyNode<T> temp = head;
+        while (temp != null) {
+            if (temp.getKey().equals(searchData))
+                return temp;
+            temp = (MyNode<T>) temp.getNext();
+        }
+        return null;
+    }
 }
